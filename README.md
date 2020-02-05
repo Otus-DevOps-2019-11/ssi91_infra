@@ -54,3 +54,14 @@ gcloud compute firewall-rules create default-puma-server \
 --allow=tcp:9292 \
 --source-ranges=0.0.0.0/0
 ```
+
+# HW #5
+
+* Создан АDC утилитой gcloud
+* Создан базовый шаблон ВМ ubuntu16.json с преустановленной mongodb и ruby
+* В шаблон добавленна секция `variables` c обязательными парамертрами и параметрами по-умолчанию
+* Создан variables.json файл с определением этих параметров
+* variables.json добавлен в .gitignore, а также создан variables.json.example
+* В ubuntu16.json, в секцию `builders` добавлены некоторые опции (`image_description`, `network`, `disk_size`, `disk_type`, `tags`)
+* Создан ещё один шаблон ВМ (immutable.json), в котором в качестве базового образа использовался созданный ранее по шаблону ubuntu16.json. Так же, в новом шаблоне было установленно приложение и создан systemd unit puma-сервера.
+* Добавлен скрипт(из одной команды, лол) create-reddit-vm.sh, создающий ВМ из нового полного образа
