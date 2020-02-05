@@ -1,0 +1,5 @@
+{
+	"source_image_family": "ubuntu-1604-lts",
+	"project_id": "infra-1010",
+	"image_description": "My Awesome Reddit Base Image. Special for Otus!"
+}

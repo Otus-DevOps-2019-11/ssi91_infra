@@ -1,0 +1,9 @@
+[Service]
+Type=simple
+User=appuser
+Group=appuser
+WorkingDirectory=/home/appuser/reddit/
+ExecStart=/usr/bin/bundle exec puma
+
+[Install]
+WantedBy=multi-user.target
