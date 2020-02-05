@@ -13,5 +13,7 @@ WantedBy=multi-user.target
 
 cp $HOME/puma.service /lib/systemd/system/puma.service
 
+systemctl daemon reload
+
 sudo systemctl start puma
 sudo systemctl enable puma
